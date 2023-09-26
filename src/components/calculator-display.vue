@@ -12,16 +12,19 @@ const props = defineProps({
 
 <style scoped>
 .calculator-display {
-  height: 50px;
-  padding: 10px;
+  height: 40px;
+  padding: 0 8px;
   background-color: white;
   display: flex;
   justify-content: right;
   align-items: center;
 
-  border-top: 2px solid #b5b4b5;
-  border-right: 2px solid #868484;
-  border-bottom: 2px solid #bebebe;
-  border-left: 2px solid #ffffff;
+  border-top: 2px solid black;
+  border-right: 2px solid LightGrey;
+  border-bottom: 2px solid LightGrey;
+  border-left: 2px solid black;
+  
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 </style>

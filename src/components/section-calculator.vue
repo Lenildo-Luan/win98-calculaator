@@ -8,6 +8,7 @@
         :key="button.id"
         :content="button.content"
         :area="button.area"
+        :color="button.color"
         @click="button.action(button.content)"
       />
     </div>
@@ -23,23 +24,23 @@ import Button from './calculator-button.vue'
 
 const equation = ref(' ')
 const buttons = reactive([
-  { id: 1, content: '1', area: 'one', action: pushContentToEquation  },
-  { id: 2, content: '2', area: 'two', action: pushContentToEquation },
-  { id: 3, content: '3', area: 'three', action: pushContentToEquation },
-  { id: 4, content: '4', area: 'four', action: pushContentToEquation },
-  { id: 5, content: '5', area: 'five', action: pushContentToEquation },
-  { id: 6, content: '6', area: 'six', action: pushContentToEquation },
-  { id: 7, content: '7', area: 'seven', action: pushContentToEquation },
-  { id: 8, content: '8', area: 'eight', action: pushContentToEquation },
-  { id: 9, content: '9', area: 'nine', action: pushContentToEquation },
-  { id: 10, content: '0', area: 'zero', action: pushContentToEquation },
-  { id: 11, content: 'C', area: 'clear', action: cleanEquation},
-  { id: 12, content: '/', area: 'divide', action: pushContentToEquation },
-  { id: 13, content: '*', area: 'multiply', action: pushContentToEquation },
-  { id: 14, content: '-', area: 'subtract', action: pushContentToEquation },
-  { id: 15, content: '+', area: 'add', action: pushContentToEquation },
-  { id: 16, content: '.', area: 'point', action: pushContentToEquation },
-  { id: 17, content: '=', area: 'calculate', action: evalEquation }
+  { id: 1, content: '1', area: 'one', action: pushContentToEquation, color: 'blue' },
+  { id: 2, content: '2', area: 'two', action: pushContentToEquation, color: 'blue' },
+  { id: 3, content: '3', area: 'three', action: pushContentToEquation, color: 'blue' },
+  { id: 4, content: '4', area: 'four', action: pushContentToEquation, color: 'blue' },
+  { id: 5, content: '5', area: 'five', action: pushContentToEquation, color: 'blue' },
+  { id: 6, content: '6', area: 'six', action: pushContentToEquation, color: 'blue' },
+  { id: 7, content: '7', area: 'seven', action: pushContentToEquation, color: 'blue' },
+  { id: 8, content: '8', area: 'eight', action: pushContentToEquation, color: 'blue' },
+  { id: 9, content: '9', area: 'nine', action: pushContentToEquation, color: 'blue' },
+  { id: 10, content: '0', area: 'zero', action: pushContentToEquation, color: 'blue' },
+  { id: 11, content: 'C', area: 'clear', action: cleanEquation, color: 'brow' },
+  { id: 12, content: '/', area: 'divide', action: pushContentToEquation, color: 'red' },
+  { id: 13, content: '*', area: 'multiply', action: pushContentToEquation, color: 'red' },
+  { id: 14, content: '-', area: 'subtract', action: pushContentToEquation, color: 'red' },
+  { id: 15, content: '+', area: 'add', action: pushContentToEquation, color: 'red' },
+  { id: 16, content: '.', area: 'point', action: pushContentToEquation, color: 'blue' },
+  { id: 17, content: '=', area: 'calculate', action: evalEquation, color: 'red' }
 ])
 
 function pushContentToEquation(content) {
@@ -57,24 +58,24 @@ function evalEquation() {
 
 <style scoped>
 .calculator {
-  padding: 10px;
-  background-color: #b9b9b9;
-  border-top: 2px solid #bebebe;
-  border-right: 2px solid #ffffff;
-  border-bottom: 2px solid #b5b4b5;
-  border-left: 2px solid #868484;
+  padding: 16px;
+  background-color: Silver;
+  border-top: 2px solid WhiteSmoke;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid WhiteSmoke;
 }
 
 .calculator-display {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .calculator-buttons {
   display: grid;
   grid-template-columns: 50px 50px 50px 50px;
   grid-template-rows: auto;
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 8px;
+  row-gap: 8px;
   grid-template-areas:
     'clear . . divide'
     'seven eight nine multiply'
